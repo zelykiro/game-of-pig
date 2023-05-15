@@ -22,4 +22,4 @@ The first player to reach a score of 75 or more wins.
 
 - HTML
 
-(This project was built as part of a udmey [course](https://www.udemy.com/course/the-complete-javascript-course/), the HTML and CSS were provided with the project file.)
+(This project was built as part of a udmey [course](https://www.udemy.com/course/the-complete-javascript-course/).)
