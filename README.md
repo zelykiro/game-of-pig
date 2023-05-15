@@ -1,3 +1,3 @@
 # Game of Pig
 
-zelykiro.github.io/game-of-pig/
+https://zelykiro.github.io/game-of-pig/
