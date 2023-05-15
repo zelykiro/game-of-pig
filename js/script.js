@@ -91,3 +91,5 @@ btnHold.addEventListener("click", () => {
   if (scores[activePLayer] >= max) playerWon();
   else switchPLayer();
 });
+
+console.log("checking interactivity!");
