@@ -1,6 +1,6 @@
-# Game Of Pig
+# Pig Game
 
-[Go To Website](https://zelykiro.github.io/game-of-pig/)
+[Go To Website](https://zelykiro.github.io/pig-game/)
 
 ## How To Play
 
