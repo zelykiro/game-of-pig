@@ -12,7 +12,7 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const diceEl = document.querySelector(".dice");
 
-const max = 75;
+const max = 5;
 const scores = [0, 0];
 
 let currentScore = 0;
@@ -31,23 +31,33 @@ function playerWon() {
   let nonActivePlayer = activePLayer === 0 ? 1 : 0;
   let loser = document.querySelector(`.player--${nonActivePlayer}`);
   let winner = document.querySelector(`.player--${activePLayer}`);
+
   btnRoll.hidden = true;
   btnHold.hidden = true;
   diceEl.hidden = true;
+
   loser.style.display = "none";
   winner.classList.add("player--winner");
   winner.classList.remove("player--active");
-  document.querySelector("main").style.width = "50rem";
+  winner.querySelector(".name").textContent += " WINS !!!";
+  winner.querySelector(".current").hidden = true;
+  winner.querySelector(".score").hidden = true;
+  winner.querySelector(".name").style.marginTop = "175px";
+
+  document.querySelector("main").style.width = "60rem";
 }
 
 btnNew.addEventListener("click", () => {
   document.querySelector("main").removeAttribute("style");
 
   let nonActivePlayer = activePLayer === 0 ? 1 : 0;
+  let winner = document.querySelector(`.player--${activePLayer}`);
 
-  document
-    .querySelector(`.player--${activePLayer}`)
-    .classList.remove("player--winner");
+  winner.classList.remove("player--winner");
+  winner.querySelector(".name").textContent = `Player ${activePLayer + 1}`;
+  winner.querySelector(".current").removeAttribute("hidden");
+  winner.querySelector(".score").removeAttribute("hidden");
+  winner.querySelector(".name").removeAttribute("style");
 
   document
     .querySelector(`.player--${nonActivePlayer}`)
@@ -59,7 +69,6 @@ btnNew.addEventListener("click", () => {
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  diceEl.hidden = true;
 
   btnRoll.removeAttribute("hidden");
   btnHold.removeAttribute("hidden");
