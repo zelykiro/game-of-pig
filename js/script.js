@@ -12,7 +12,7 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const diceEl = document.querySelector(".dice");
 
-const max = 20;
+const max = 75;
 const scores = [0, 0];
 
 let currentScore = 0;
@@ -91,5 +91,3 @@ btnHold.addEventListener("click", () => {
   if (scores[activePLayer] >= max) playerWon();
   else switchPLayer();
 });
-
-console.log("checking interactivity!");
